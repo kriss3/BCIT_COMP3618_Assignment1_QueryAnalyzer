@@ -58,6 +58,7 @@
     <Compile Include="frmConnection.Designer.cs">
       <DependentUpon>frmConnection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="MyApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCommand.resx">

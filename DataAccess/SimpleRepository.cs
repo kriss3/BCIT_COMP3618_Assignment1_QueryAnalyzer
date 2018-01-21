@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 
@@ -11,16 +6,16 @@ namespace DataAccess
 {
     public class SimpleRepository
     {
-        public ConnectionState ConnState { get; private set; }
+        public SqlConnection Connection { get; private set; }
+
+        public SimpleRepository()
+        {
+            GetConnectionStatistics();
+        }
 
         public string GetConnString()
         {
             return ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
-        }
-
-        public SqlConnection Connect()
-        {
-            return new SqlConnection(GetConnString());
         }
 
         public DataSet GetResults(string query)
@@ -40,23 +35,12 @@ namespace DataAccess
             return ds;
         }
 
-        public string GetConnectionStatistics()
+        private void GetConnectionStatistics()
         {
-            var results = String.Empty;
-
-            using (var c = new SqlConnection(GetConnString()))
-            {
-                c.Open();
-                results =
-                  $"Connection Status:\t {c.State}{Environment.NewLine}"
-                + $"Conn TimeOut:\t{c.ConnectionTimeout}{Environment.NewLine}"
-                + $"Packet Size:\t {c.PacketSize}{Environment.NewLine}"
-                + $"Server Version:\t {c.ServerVersion}{Environment.NewLine}"
-                + $"Workstation ID:\t {c.WorkstationId}";
-                ConnState = c.State;
-            }
-            return results;
+            SqlConnection conn = null;
+            conn = new SqlConnection(GetConnString());
+            conn.Open();
+            Connection = conn;
         }
-
     }
 }
