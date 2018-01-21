@@ -4,6 +4,11 @@ using System.Data;
 
 namespace DataAccess
 {
+    /// <summary>
+    /// Krzysztof Szczurowski
+    /// BCIT COMP3618 Assingment 1;
+    /// Repo: https://github.com/kriss3/BCIT_COMP3618_Assignment1_QueryAnalyzer.git
+    /// </summary>
     public class SimpleRepository
     {
         public SqlConnection Connection { get; private set; }
