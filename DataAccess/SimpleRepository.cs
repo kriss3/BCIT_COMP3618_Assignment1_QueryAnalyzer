@@ -15,7 +15,7 @@ namespace DataAccess
 
         public SimpleRepository()
         {
-            GetConnectionStatistics();
+            GetConnection();
         }
 
         public string GetConnString()
@@ -40,7 +40,7 @@ namespace DataAccess
             return ds;
         }
 
-        private void GetConnectionStatistics()
+        private void GetConnection()
         {
             SqlConnection conn = null;
             conn = new SqlConnection(GetConnString());

@@ -39,11 +39,11 @@
             // txtConnectionDetails
             // 
             this.txtConnectionDetails.Location = new System.Drawing.Point(16, 36);
-            this.txtConnectionDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtConnectionDetails.Margin = new System.Windows.Forms.Padding(4);
             this.txtConnectionDetails.Multiline = true;
             this.txtConnectionDetails.Name = "txtConnectionDetails";
             this.txtConnectionDetails.ReadOnly = true;
-            this.txtConnectionDetails.Size = new System.Drawing.Size(445, 115);
+            this.txtConnectionDetails.Size = new System.Drawing.Size(445, 151);
             this.txtConnectionDetails.TabIndex = 1;
             // 
             // label1
@@ -61,7 +61,7 @@
             this.sStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.sStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblToolStripStatus});
-            this.sStrip.Location = new System.Drawing.Point(0, 195);
+            this.sStrip.Location = new System.Drawing.Point(0, 227);
             this.sStrip.Name = "sStrip";
             this.sStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
             this.sStrip.Size = new System.Drawing.Size(479, 25);
@@ -76,8 +76,8 @@
             // 
             // btnAnalyzer
             // 
-            this.btnAnalyzer.Location = new System.Drawing.Point(363, 159);
-            this.btnAnalyzer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnalyzer.Location = new System.Drawing.Point(361, 195);
+            this.btnAnalyzer.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnalyzer.Name = "btnAnalyzer";
             this.btnAnalyzer.Size = new System.Drawing.Size(100, 28);
             this.btnAnalyzer.TabIndex = 3;
@@ -89,13 +89,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 220);
+            this.ClientSize = new System.Drawing.Size(479, 252);
             this.Controls.Add(this.btnAnalyzer);
             this.Controls.Add(this.sStrip);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtConnectionDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConnection";

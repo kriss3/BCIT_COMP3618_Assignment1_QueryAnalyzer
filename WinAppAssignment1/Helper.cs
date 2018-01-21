@@ -21,7 +21,7 @@ namespace WinAppAssignment1
         public static string GetConnectionDetails(SqlConnection c)
         {
             return 
-                  $"Connection Status Details. State at the Form Load time: {Environment.NewLine}"
+                  $"Connection Status Details. State at the time of Form Load: {Environment.NewLine}"
                 + $"{Environment.NewLine}"
                 + $"Connection Status:\t {c.State}{Environment.NewLine}"
                 + $"Conn TimeOut:\t{c.ConnectionTimeout}{Environment.NewLine}"
